@@ -41,8 +41,8 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      CI: false
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+      CI: false
     
     steps:
       - name: Download artifact from build job
